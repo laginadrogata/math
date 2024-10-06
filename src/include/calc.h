@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <cstdint>
 using namespace std;
 
 class Calc {
@@ -8,12 +9,12 @@ class Calc {
         Calc() {}
         ~Calc() {}
         vector<float> v;
-        float num;
-        float num2;
-        float base;
-        float exp;
-        float index;
-        float res;
+        uint64_t num;
+        uint64_t num2;
+        uint64_t base;
+        uint64_t exp;
+        uint64_t index;
+        uint64_t res;
         void calc();
         void add();
         void sub();

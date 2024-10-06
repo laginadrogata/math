@@ -1,4 +1,6 @@
 #include    <iostream>
+#include    <unistd.h>
+#include    <cstdint>
 
 using namespace std;
 class Fibonacci{
@@ -6,7 +8,7 @@ class Fibonacci{
         Fibonacci(){}
         ~Fibonacci(){}
         void fibonacci();
-        int i, N, primo=1,secondo=1,terzo;
+        uint64_t i, N, primo=0,secondo=1,terzo;
 
     
 };

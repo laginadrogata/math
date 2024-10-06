@@ -19,9 +19,9 @@ void BinDecCon::bin() {
     cin >> decimal;
     while (decimal > 0) {
         if (decimal % 2 == 0) {
-            binary += '0';}
+            binary = '0'+ binary;}
         else {
-            binary += '1';}
+            binary ='1' + binary;}
         decimal /= 2;
     }
 
@@ -34,13 +34,12 @@ void BinDecCon::dec() {
     cout << "Inserisci un numero binario: ";
     cin >> binary;
     while (binary > 0) {
-        if (binary % 10 != 0) { 
         decimal += (binary % 10) * pow(2, i);
         i++;
         binary /= 10;
+        
     }
-
+    
     cout << "Numero decimale: " << decimal << endl;
-
-    }
+    
 }

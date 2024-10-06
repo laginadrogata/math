@@ -6,14 +6,14 @@ void Fibonacci::fibonacci() {
         cin >> N;
     } while (N < 3);
 
-    cout << primo << ',' << secondo;
+    cout << primo<< ", " << secondo ;
 
-    for (int i = 2; i < N; i++) {
+    for (uint64_t i = 2; i < N; i++) {
         terzo = primo + secondo;
         primo = secondo;
         secondo = terzo;
-        cout << ',' << terzo;         
-
+        cout << ", " << terzo;      
+       
     }
     cout << '\n';
 }
