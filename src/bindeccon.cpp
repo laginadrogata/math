@@ -39,8 +39,8 @@ void BinDecCon::dec() {
         i++;
         binary /= 10;
     }
-
+ }
     cout << "Numero decimale: " << decimal << endl;
 
-    }
+    
 }
