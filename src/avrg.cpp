@@ -12,12 +12,15 @@ void Avrg::avrg() {
         cout << "Vuoi aggiungere un numero? (s/n): ";
         cin >> add;
     }
-   if (add == "n") {
+   if (add == "n" and v.size() > 1) {
     float sum = 0.0;
     for (float num : v) {
         sum += num;
     }
     float average = sum / v.size();
     cout << "Media: " << average << endl;
-}
+   }else {
+    cout << "Inserisci almeno due numeri" << endl;
+    cout << "Vuoi aggiungere un numero? (s/n): ";
+        cin >> add;}
 }
