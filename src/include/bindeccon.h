@@ -7,8 +7,10 @@ class BinDecCon {
         BinDecCon() {}
         ~BinDecCon() {}
         void binceccon();
-        void bin();
-        void dec();
+        void dectobin();
+        void dectooct();
+        void bintodec();
+        void octtodec();
         
         
 

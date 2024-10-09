@@ -26,11 +26,10 @@ void Calc::calc() {
 
 void Calc::add() {
     string choice;
-    cout << "vuoi aggiungere un numero? (s/n): ";
-    cin >> choice;
+   
 
 
-    while (choice != "n" ) {
+    while (choice != "n"   ) {
         cout << "Numero: ";
         cin >> num;
         v.push_back(num);
@@ -40,10 +39,11 @@ void Calc::add() {
     
     if (choice == "n" && v.size() >= 2) {
     for (float num : v) {
-        res += num;
+        res += static_cast<long double>(num);
+        cout<< num << ',' << res <<'\n';
         
     }
-    cout    << "risultato: " << res << endl;
+    cout    <<setprecision(15)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n"
@@ -60,9 +60,8 @@ void Calc::add() {
 }
 void Calc::sub() {
     string choice;
-    cout << "vuoi agiungere un numero? (s/n): ";
-    cin >> choice;
-    while (choice != "n") {
+   
+    while (choice != "n" ) {
         cout << "Numero: ";
         cin >> num;
         v.push_back(num);
@@ -72,10 +71,10 @@ void Calc::sub() {
    
     if (choice == "n" && v.size() >= 2) {
     for (float num : v) {
-        res -= num;
+        res -= static_cast<long double>(num);
         
     }
-    cout    << "risultato: " << res << endl;
+    cout    <<setprecision(15)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n" ;
@@ -85,9 +84,8 @@ void Calc::sub() {
 
 void Calc::mul() {
     string choice;
-    cout << "vuoi agiungere un numero? (s/n): ";
-    cin >> choice;
-    while (choice != "n") {
+    res=1;
+    while (choice != "n" ) {
         cout << "Numero: ";
         cin >> num;
         v.push_back(num);
@@ -97,9 +95,9 @@ void Calc::mul() {
    
     if (choice == "n" && v.size() >= 2) {
     for (float num : v) {
-        res *= num;    }
+        res *= static_cast<long double>(num);    }
         
-    cout   << "risultato: " << res << endl;
+    cout   <<setprecision(15)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n";
@@ -110,12 +108,12 @@ void Calc::mul() {
 
 
 void Calc::div() {
-        cout << "Numero1 ";
+        cout << "numero1: ";
         cin >> num;
-        cout << "Numero2 ";
+        cout << "numero2: ";
         cin >> num2;
         res = num / num2;
-        cout    << "risultato: " << res << endl;
+        cout    <<setprecision(15)<< "risultato: " << res << endl;
         
 
 }
@@ -132,7 +130,7 @@ void Calc::pow() {
     cin >> exp;
     
     res = ::pow(base, exp);
-    cout << "risultato: " << res << endl;
+    cout <<setprecision(15)<< "risultato: " << res << endl;
 }
 void Calc::rt() {
     cout << "inserisci la base: ";
@@ -140,5 +138,5 @@ void Calc::rt() {
     cout << "inserisci l'indice: ";
     cin >> index ;
     res = ::pow(base, 1/index);
-    cout   << "risultato: " << res << endl;
+    cout   <<setprecision(15)<< "risultato: " << res << endl;
 }

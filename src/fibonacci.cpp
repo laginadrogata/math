@@ -6,9 +6,9 @@ void Fibonacci::fibonacci() {
         cin >> N;
     } while (N < 3);
 
-    cout << primo<< ", " << secondo ;
+    cout <<setprecision(15)<< primo<< ", " << secondo ;
 
-    for (uint64_t i = 2; i < N; i++) {
+    for (long double i = 2; i < N; i++) {
         terzo = primo + secondo;
         primo = secondo;
         secondo = terzo;

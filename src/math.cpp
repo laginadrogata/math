@@ -28,7 +28,7 @@ void Math::menu() {
     cin >> choice;
     if (choice == 1) {dc.dc();}
     else if (choice == 2) {avrg.avrg();}
-    else if (choice == 3) { calc.calc();}
+    else if (choice == 3) {calc.calc();}
     else if (choice == 4) {area.area();}
     else if (choice == 5) {pitagora.pitagora();}
     else if (choice == 6) {bindeccon.binceccon();}
