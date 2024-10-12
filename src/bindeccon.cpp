@@ -66,5 +66,5 @@ void BinDecCon::octtodec()  {
         i++;
         oct /= 10;
     }
-    cout << "Numero decimale: " << dec << endl;
+ cdc
 }
