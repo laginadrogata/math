@@ -24,6 +24,7 @@ void Calc::calc() {
 }
 
 
+
 void Calc::add() {
     string choice;
    
@@ -38,9 +39,9 @@ void Calc::add() {
     }
     
     if (choice == "n" && v.size() >= 2) {
-    for (float num : v) {
-        res += static_cast<long double>(num);
-        cout<< num << ',' << res <<'\n';
+    for (mp::cpp_dec_float_50 num : v) {
+        res += num;
+       
         
     }
     cout    <<setprecision(15)<< "risultato: " << res << endl;
@@ -70,11 +71,11 @@ void Calc::sub() {
     }
    
     if (choice == "n" && v.size() >= 2) {
-    for (float num : v) {
-        res -= static_cast<long double>(num);
+    for (mp::cpp_dec_float_50 num : v) {
+        res -= num;
         
     }
-    cout    <<setprecision(15)<< "risultato: " << res << endl;
+    cout    << "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n" ;
@@ -94,10 +95,10 @@ void Calc::mul() {
     }
    
     if (choice == "n" && v.size() >= 2) {
-    for (float num : v) {
-        res *= static_cast<long double>(num);    }
+    for (mp::cpp_dec_float_50 num : v) {
+        res *= num;    }
         
-    cout   <<setprecision(15)<< "risultato: " << res << endl;
+    cout   << "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n";
@@ -113,7 +114,7 @@ void Calc::div() {
         cout << "numero2: ";
         cin >> num2;
         res = num / num2;
-        cout    <<setprecision(15)<< "risultato: " << res << endl;
+        cout    << "risultato: " << res << endl;
         
 
 }
@@ -129,14 +130,14 @@ void Calc::pow() {
     cout << "inserisci l'esponente: ";
     cin >> exp;
     
-    res = ::pow(base, exp);
-    cout <<setprecision(15)<< "risultato: " << res << endl;
+    res = mp::pow(base, exp);
+    cout << "risultato: " << res << endl;
 }
 void Calc::rt() {
     cout << "inserisci la base: ";
     cin >> base;
     cout << "inserisci l'indice: ";
     cin >> index ;
-    res = ::pow(base, 1/index);
-    cout   <<setprecision(15)<< "risultato: " << res << endl;
+    res = mp::pow(base, 1/index);
+    cout   << "risultato: " << res << endl;
 }

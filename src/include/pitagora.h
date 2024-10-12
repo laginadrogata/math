@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "../include/alias.h"
 using namespace std;
 class Pitagora {
     public:
@@ -8,10 +9,7 @@ class Pitagora {
         void pitagora();
         void Cateto ();
         void ipotenusa ();
-        float c;
-        float C;
-        float i;
-        float c2;
-        float C2;
-        float i2;
+        
+        mp::cpp_dec_float_50 c, i, C, c2, i2, C2;
+   
 };

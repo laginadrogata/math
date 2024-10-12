@@ -1,10 +1,9 @@
 #include "include/avrg.h"
 
 void Avrg::avrg() {
-    float num;
-    string add;
-    cout << "Vuoi aggiungere un numero? (s/n): ";
-    cin >> add;
+    cout <<"Numero: ";
+    cin >> num;
+    
     while (add != "n") {
         cout << "Numero: ";
         cin >> num;
@@ -13,14 +12,16 @@ void Avrg::avrg() {
         cin >> add;
     }
    if (add == "n" and v.size() > 1) {
-    float sum = 0.0;
-    for (float num : v) {
+    
+    for (mp::cpp_dec_float_50 num : v) {
         sum += num;
     }
-    float average = sum / v.size();
-    cout << "Media: " << average << endl;
-   }else {
-    cout << "Inserisci almeno due numeri" << endl;
+     average = sum / v.size();
+    cout << "Media: " << average <<'\n';
+   }
+   else {
+    cout << "Inserisci almeno due numeri" <<'\n';
     cout << "Vuoi aggiungere un numero? (s/n): ";
         cin >> add;}
 }
+

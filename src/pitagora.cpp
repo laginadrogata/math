@@ -23,7 +23,7 @@ void Pitagora::Cateto() {
     cout << "insterici il cateto: ";
     cin >> c;
     }
-    C=::sqrt(pow(i,2)-pow(c,2));
+    C=mp::sqrt(mp::pow(i,2)-mp::pow(c,2));
     cout << "risultato: " << C << endl;
 }
 void Pitagora::ipotenusa() {
@@ -31,7 +31,7 @@ void Pitagora::ipotenusa() {
         cin >> C;
         cout << "inserici il secondo cateto: ";
         cin >> c;
-        i=::sqrt(pow(C,2)+pow(c,2));
+        i=mp::sqrt(mp::pow(C,2)+mp::pow(c,2));
         cout << "risultato: " << i << endl;
 }
 

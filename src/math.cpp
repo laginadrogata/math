@@ -6,6 +6,7 @@
 #include "include/pitagora.h"
 #include "include/bindeccon.h"
 #include "include/fibonacci.h"
+#include "include/fattoriale.h"
 
 DC dc;
 Avrg avrg;
@@ -14,6 +15,7 @@ Area area;
 Pitagora pitagora;
 BinDecCon bindeccon;
 Fibonacci fibonacci;
+Fattoriale fattoriale;
 void Math::menu() {
     int choice;
     cout << "1 Diagramma Catresiano\n";
@@ -23,7 +25,8 @@ void Math::menu() {
     cout << "5 Teorema di Pitagora\n";
     cout << "6 Convertitore numeri\n";
     cout << "7 Fibonacci\n";
-    cout << "8 Esci\n";
+    cout << "8 Fattoriale\n";
+    cout << "9 Esci\n";
     cout << "Scegli tra le opzioni sopra: ";
     cin >> choice;
     if (choice == 1) {dc.dc();}
@@ -33,6 +36,7 @@ void Math::menu() {
     else if (choice == 5) {pitagora.pitagora();}
     else if (choice == 6) {bindeccon.binceccon();}
     else if (choice == 7) {fibonacci.fibonacci();}
-    else if (choice == 8) {return ;}
+    else if (choice == 8) {fattoriale.fattoriale();}
+    else if (choice == 9) {return ;}
     
 }   

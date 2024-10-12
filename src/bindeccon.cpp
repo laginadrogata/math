@@ -1,7 +1,7 @@
 #include "include/bindeccon.h"
 
 void BinDecCon::binceccon() {
-    int choice;
+  long long choice;
     cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
     cout << "1-Converti da Decimale a Binario\n";
     cout << "2-Converti da Binario a Decimale\n";
@@ -17,15 +17,12 @@ void BinDecCon::binceccon() {
 
 
 void BinDecCon::dectobin() {
-    int decimal ;
+  long long decimal ;
     string binary;
     cout << "Inserisci un numero decimale: ";
     cin >> decimal;
     while (decimal > 0) {
-        if (decimal % 2 == 0) {
-            binary = '0'+ binary;}
-        else {
-            binary ='1' + binary;}
+        binary = to_string(decimal % 2) + binary;
         decimal /= 2;
     }
 
@@ -34,7 +31,7 @@ void BinDecCon::dectobin() {
 }    
 
 void BinDecCon::bintodec() {
-    int binary,decimal = 0, i = 0;
+  long long binary,decimal = 0, i = 0;
     cout << "Inserisci un numero binario: ";
     cin >> binary;
     while (binary > 0) {
@@ -48,37 +45,19 @@ void BinDecCon::bintodec() {
     
 }
 void BinDecCon::dectooct()  {
-    int decimal;
+  long long decimal;
     string oct;
     cout << "Inserisci un numero decimale: ";
     cin >> decimal;
     while (decimal > 0) {
-        if (decimal % 8 == 0) {
-            oct = '0'+ oct;}
-        else if (decimal % 8 == 1) {
-            oct ='1' + oct;}
-        else if (decimal % 8 == 2) {
-            oct ='2' + oct;}
-        else if (decimal % 8 == 3) {
-            oct ='3' + oct;}
-        else if (decimal % 8 == 4) {
-            oct ='4' + oct;}
-        else if (decimal % 8 == 5) {
-            oct ='5' + oct;}
-        else if (decimal % 8 == 6) {
-            oct ='6' + oct;}
-        else if (decimal % 8 == 7) {
-            oct ='7' + oct;}
-        else if (decimal % 8 == 8) {
-            oct ='8' + oct;}
-        
+      oct = to_string(decimal % 8) + oct;
         decimal /= 8;
         
     }
     cout << "ottale: " << oct << endl;
         }    
 void BinDecCon::octtodec()  {
-    int i=0,oct,dec = 0;
+  long long i=0,oct,dec = 0;
     cout << "Inserisci un numero ottale: ";
     cin >> oct;
    

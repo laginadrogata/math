@@ -2,17 +2,22 @@
 #include <vector>
 #include <cmath>
 #include <cstdint>
-#include <boost/multiprecision/cpp_int.hpp>
-#include <locale>
+#include "../include/alias.h"
+
+
 using namespace std;
+
+
 
 
 class Calc {
     public:
         Calc() {}
         ~Calc() {}
-        vector<long  double> v;
-        long  double num, num2, base, exp, index, res=0;
+        
+       
+        vector<mp::cpp_dec_float_50> v;
+        mp::cpp_dec_float_50 num, num2, base, exp, index, res=0;
         void calc();
         void add();
         void sub();
@@ -21,3 +26,4 @@ class Calc {
         void pow();
         void rt();
 };
+extern Calc calc;

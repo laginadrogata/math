@@ -1,20 +1,25 @@
 #include "include/dc.h"
 
 void DC::dc() {
-  cout << "scrivi i o d: ";
-    cin >> prop;
+  cout << "1-Inversamente Proporzionale\n";
+  cout << "2-Direttamente Proporzionale\n";
+  cout << "Scegli tra le opzioni sopra: ";
+  
+    cin >> choice;
     cout << "k: ";
     cin >> k;
-    if (prop == "i") {
+    
+    if (choice == 1) {
         invprop();
     }
-    else if (prop == "d") {
+    else if (choice == 2) {
         dirprop();
     }
     
      
 
 }
+
 void DC::dirprop() {
     cout << "x|y\n";
     while (x != 10000) {

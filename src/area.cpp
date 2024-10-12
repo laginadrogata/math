@@ -3,11 +3,12 @@
 
 void Area::area() {
     int choice;
-    cout << "Inserisci figura: \n";
+    
     cout << "1. Rettangolo\n";
     cout << "2. Triangolo\n";
     cout << "3. Cerchio\n";
     cout << "4. Trapezio\n";
+    cout << "Scegli tra le opzioni sopra: ";
     cin >> choice;
     if (choice == 1) {Area::rect();};
     if (choice == 2) {Area::tri();};

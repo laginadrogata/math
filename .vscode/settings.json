@@ -124,6 +124,11 @@
     "thread": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "strstream": "cpp",
+    "cfenv": "cpp",
+    "complex": "cpp",
+    "decimal": "cpp",
+    "source_location": "cpp"
   }
 }
