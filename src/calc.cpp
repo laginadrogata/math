@@ -6,7 +6,8 @@ void Calc::calc() {
     cout << "3-Moltiplicazione\n";
     cout << "4-Divisione\n";
     cout << "5-Radice\n";
-    cout << "6-Potenza\n";  
+    cout << "6-Potenza\n";
+    cout << "7-Percentuale\n";  
 
 
     cout << "Scegli l'operazione: " ; 
@@ -17,6 +18,7 @@ void Calc::calc() {
     else if (choice == 4) {div();}
     else if (choice == 5) {rt();}
     else if (choice == 6) {pow();}
+    else if (choice == 7) {percent();}
 
 
 
@@ -44,7 +46,7 @@ void Calc::add() {
        
         
     }
-    cout    <<setprecision(15)<< "risultato: " << res << endl;
+    cout    <<setprecision(15)<<setprecision(13)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n"
@@ -75,7 +77,7 @@ void Calc::sub() {
         res -= num;
         
     }
-    cout    << "risultato: " << res << endl;
+    cout    <<setprecision(13)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n" ;
@@ -98,7 +100,7 @@ void Calc::mul() {
     for (mp::cpp_dec_float_50 num : v) {
         res *= num;    }
         
-    cout   << "risultato: " << res << endl;
+    cout   <<setprecision(13)<< "risultato: " << res << endl;
     }
     else if ( v.size() < 2) {
         cout << "Inserisci almeno due numeri\n";
@@ -114,7 +116,7 @@ void Calc::div() {
         cout << "numero2: ";
         cin >> num2;
         res = num / num2;
-        cout    << "risultato: " << res << endl;
+        cout    <<setprecision(13)<< "risultato: " << res << endl;
         
 
 }
@@ -131,7 +133,7 @@ void Calc::pow() {
     cin >> exp;
     
     res = mp::pow(base, exp);
-    cout << "risultato: " << res << endl;
+    cout <<setprecision(13)<< "risultato: " << res << endl;
 }
 void Calc::rt() {
     cout << "inserisci la base: ";
@@ -139,5 +141,13 @@ void Calc::rt() {
     cout << "inserisci l'indice: ";
     cin >> index ;
     res = mp::pow(base, 1/index);
-    cout   << "risultato: " << res << endl;
+    cout  <<setprecision(13) << "risultato: " << res << '\n';
+}
+void Calc::percent() {
+    cout << "inserici percentuale: ";
+    cin >> perc;
+    cout <<"inserisci un numero: ";
+    cin >> num;
+    res = num * perc / 100;
+    cout<<setprecision(13) << "risultato: " << res << '\n';
 }

@@ -17,7 +17,7 @@ class Calc {
         
        
         vector<mp::cpp_dec_float_50> v;
-        mp::cpp_dec_float_50 num, num2, base, exp, index, res=0;
+        mp::cpp_dec_float_50 num, num2, base, exp, index, res=0, perc;
         void calc();
         void add();
         void sub();
@@ -25,5 +25,6 @@ class Calc {
         void div();
         void pow();
         void rt();
+        void percent();
 };
 extern Calc calc;
