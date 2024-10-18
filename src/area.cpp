@@ -22,7 +22,7 @@ void Area::rect() {
     cout <<"h: ";
     cin >> h;
     A = b*h;
-    cout << "Area: " << A << endl;
+    cout << "Area: "<< setprecision(13) << A << endl;
 }
 void Area::tri() {
     cout <<"b: ";
@@ -30,25 +30,26 @@ void Area::tri() {
     cout <<"h: ";
     cin >> h;
     A = (b*h)/2;
-    cout << "Area: " << A << endl;
+    cout << "Area: "<< setprecision(13) << A << endl;
 }
 
 void Area::cir() {
     cout <<"r: ";
     cin >> r;
-    A = pi*pow(r,2);
-    cout << "Area: " << A << endl;
+    A = pi*mp::pow(r,2);
+    cout << "Area: " << setprecision(13) << A << endl;
 }
 
+
 void Area::trap() {
-    cout <<"b: ";
+    cout <<"b1: ";
     cin >> b;
-    cout <<"B: ";
+    cout <<"b2: ";
     cin >> B;
     cout <<"h: ";
     cin >> h;
     
     A = ((b+B)*h)/2;
-    cout << "Area: " << A << endl;
+    cout << "Area: " << setprecision(13) << A << " cm2\n";
 }
 

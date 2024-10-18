@@ -2,10 +2,11 @@
 
 void Fattoriale::fattoriale() {
     cout << "Inserisci un numero: ";
-    cin >> i;
-    for (mp::cpp_dec_float_50 j = 1; j <= i; j++) {
-        fatt *= j;                  
+    cin >> num;
+    for (mp::cpp_dec_float_50 i = 2; i <= num; i++) {
+        fatt *= i;                  
         
+    
     }   
    cout << "fattoriale: " << fatt << '\n';
 }

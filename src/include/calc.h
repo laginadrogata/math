@@ -1,11 +1,10 @@
-#include <iostream>
 #include <vector>
 #include <cmath>
 #include <cstdint>
 #include "../include/alias.h"
 
 
-using namespace std;
+
 
 
 

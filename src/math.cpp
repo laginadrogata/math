@@ -7,6 +7,8 @@
 #include "include/bindeccon.h"
 #include "include/fibonacci.h"
 #include "include/fattoriale.h"
+#include "include/prime.h"
+#include "include/die.h"
 
 DC dc;
 Avrg avrg;
@@ -16,27 +18,28 @@ Pitagora pitagora;
 BinDecCon bindeccon;
 Fibonacci fibonacci;
 Fattoriale fattoriale;
-void Math::menu() {
-    int choice;
-    cout << "1 Diagramma Catresiano\n";
-    cout << "2 Media\n";
-    cout << "3 Calcolatrice\n";
-    cout << "4 Area\n";
-    cout << "5 Teorema di Pitagora\n";
-    cout << "6 Convertitore numeri\n";
-    cout << "7 Fibonacci\n";
-    cout << "8 Fattoriale\n";
-    cout << "9 Esci\n";
-    cout << "Scegli tra le opzioni sopra: ";
-    cin >> choice;
-    if (choice == 1) {dc.dc();}
-    else if (choice == 2) {avrg.avrg();}
-    else if (choice == 3) {calc.calc();}
-    else if (choice == 4) {area.area();}
-    else if (choice == 5) {pitagora.pitagora();}
-    else if (choice == 6) {bindeccon.binceccon();}
-    else if (choice == 7) {fibonacci.fibonacci();}
-    else if (choice == 8) {fattoriale.fattoriale();}
-    else if (choice == 9) {return ;}
+Prime prime;
+Dice die;
+
+void Math::menu(int argc ,char *args[]){
+    string choice;
+    
+    if (argc < 2 ) {
+         cout << "inserisci in argomento\n";
+             
+    }
+    else{
+        choice= args[1];
+        if (choice == "cartesiano") {dc.dc();}
+        else if (choice == "media") {avrg.avrg();}
+        else if (choice == "calcolatrice" || choice== "calc") {calc.calc();}
+        else if (choice == "area") {area.area();}
+        else if (choice == "pitagora") {pitagora.pitagora();}
+        else if (choice == "convertitore") {bindeccon.binceccon();}
+        else if (choice == "fibonacci") {fibonacci.fibonacci();}
+        else if (choice == "fattoriale") {fattoriale.fattoriale();}
+        else if (choice == "numprimo" || choice == "primo") {prime.prime();} 
+        else if (choice == "dado") {die.die();}
+    }
     
 }   

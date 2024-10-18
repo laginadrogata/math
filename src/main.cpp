@@ -1,6 +1,6 @@
 #include "include/math.h"
-int main() {
+int main(int argc, char *args[]) {
     Math math;
-    math.menu();
+    math.menu(argc, args);
     return 0; 
 }

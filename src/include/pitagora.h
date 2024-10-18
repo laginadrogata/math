@@ -1,7 +1,7 @@
-#include <iostream>
+
 #include <cmath>
 #include "../include/alias.h"
-using namespace std;
+
 class Pitagora {
     public:
         Pitagora() {}

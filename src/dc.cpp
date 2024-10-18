@@ -4,8 +4,10 @@ void DC::dc() {
   cout << "1-Inversamente Proporzionale\n";
   cout << "2-Direttamente Proporzionale\n";
   cout << "Scegli tra le opzioni sopra: ";
-  
+    
     cin >> choice;
+    cout << "Quanti numeri vuoi stampare: ";
+    cin >> num;
     cout << "k: ";
     cin >> k;
     
@@ -22,21 +24,22 @@ void DC::dc() {
 
 void DC::dirprop() {
     cout << "x|y\n";
-    while (x != 10000) {
+    while (x <= num ) {
         y=k*x;
-        cout << x << '|' << y<<'\n';
+        cout << setprecision(13)<< x << '|' << y<<'\n';
         x++;
-        sleep(1);
+    
+        
     }
 }
 
 void DC::invprop() {
     cout << "x|y" << '\n';
     x=1;
-    while (x!=10000) {
+    while (x <=num ) {
         y=k/x;
-        cout << x << '|' << y << '\n';
+        cout << setprecision(13)<< x << '|' << y << '\n';
         x++;
-        sleep(1);
+        
     }
 }

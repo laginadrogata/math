@@ -24,7 +24,7 @@ void Pitagora::Cateto() {
     cin >> c;
     }
     C=mp::sqrt(mp::pow(i,2)-mp::pow(c,2));
-    cout << "risultato: " << C << endl;
+    cout << "risultato: "<<setprecision(13)<< C << endl;
 }
 void Pitagora::ipotenusa() {
         cout << "inserici il primo cateto: ";
@@ -32,6 +32,6 @@ void Pitagora::ipotenusa() {
         cout << "inserici il secondo cateto: ";
         cin >> c;
         i=mp::sqrt(mp::pow(C,2)+mp::pow(c,2));
-        cout << "risultato: " << i << endl;
+        cout << "risultato: " << setprecision(13)<< i << endl;
 }
 

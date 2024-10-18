@@ -6,13 +6,13 @@ void Fibonacci::fibonacci() {
         cin >> N;
     } while (N < 3);
 
-    cout <<setprecision(15)<< primo<< ", " << secondo ;
+    cout <<setprecision(13)<< primo<< ", " << secondo ;
 
-    for (long double i = 2; i < N; i++) {
+    for (mp::cpp_dec_float_50 i = 2; i < N; i++) {
         terzo = primo + secondo;
         primo = secondo;
         secondo = terzo;
-        cout << ", " << terzo;      
+        cout << setprecision(13)<< ", " << terzo;      
        
     }
     cout << '\n';

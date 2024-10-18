@@ -5,6 +5,6 @@ class Math {
     public:
         Math() {}
         ~Math() {}
-        void menu();
+       void menu(int argc ,char *args[]);
 
 };
